@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 
 use App\Evaluations;
 use Illuminate\Http\Request;
-use App\Traits\GeneralTrait;
+// use App\Traits\GeneralTrait;
 
 class EvalsController extends Controller
 {
 
-    use GeneralTrait;
+    // use GeneralTrait;
     public function add(Request $request)
     {
            $evaluations =new Evaluations;
@@ -20,8 +20,6 @@ class EvalsController extends Controller
            $evaluations->movement_eval = $request->movement_eval;
            $evaluations->total_eval = $request->total_eval;
            $evaluations->user_id = $request->user_id;
-
-        //    $evaluations->password = bcrypt("$request->password");
            $evaluations->save();
 
             $response['data'] = $evaluations;

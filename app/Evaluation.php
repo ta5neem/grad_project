@@ -4,8 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Evaluations extends Model
+class Evaluation extends Model
 {
+
+    //
+
     use Notifiable;
 
     /**
@@ -13,9 +16,10 @@ class Evaluations extends Model
      *
      * @var array
      */
+    
     protected $fillable = [
-        'vedio_num', 'hands_eval', 'face_eval','movement_eval',
-        'total_eval','user_id',
+        'hand_eval_id', 'voice_eval_id','face_eval_id',
+        'vedio_id'
     ];
 
 
@@ -33,4 +37,5 @@ class Evaluations extends Model
     {
         return [];
     }
+
 }
