@@ -15,10 +15,18 @@ class HandEvals extends Migration
     {
         Schema::create('hand_evals', function (Blueprint $table) {
             $table->id();
-            $table->Integer('arm_closed');
-            $table->Integer('hand_crossed');
-            $table->Integer('hand_opend');
-            $table->Integer('sholder');           
+            $table->Integer('CLOSED_U_HANDS');
+            $table->Integer('HAND_CROSSED');
+            $table->Integer('HAND_ON_HIP'); 
+            $table->Integer('HAND_ON_HEAD');
+            $table->Integer('STRAIGHT_DOWN');
+            $table->Integer('CLOSED_D_HANDS'); 
+            
+            $table->foreign('evaluation_id')
+            ->references('id')->on('evaluations')
+            ->onDelete('cascade'); 
+
+
             $table->rememberToken();
             $table->timestamps();
         }); 
