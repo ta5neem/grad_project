@@ -21,7 +21,7 @@ class HandEvals extends Migration
             $table->Integer('HAND_ON_HEAD');
             $table->Integer('STRAIGHT_DOWN');
             $table->Integer('CLOSED_D_HANDS'); 
-            
+            $table->unsignedBigInteger('evaluation_id');
             $table->foreign('evaluation_id')
             ->references('id')->on('evaluations')
             ->onDelete('cascade'); 

@@ -19,6 +19,7 @@ class Hand_evals extends Model
     protected $fillable = [
         'CLOSED_U_HANDS', 'HAND_CROSSED','HAND_ON_HIP',
         'HAND_ON_HEAD','STRAIGHT_DOWN','CLOSED_D_HANDS',
+        'evaluation_id'
     ];
 
 

@@ -16,26 +16,7 @@ class CreateEvaluationsTable extends Migration
         Schema::create('evaluations', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('hand_eval_id');
-            $table->unsignedBigInteger('voice_eval_id');            
-            $table->unsignedBigInteger('face_eval_id');
-            $table->unsignedBigInteger('vedio_id');
 
-            $table->foreign('hand_eval_id')
-            ->references('id')->on('hand_evals')
-            ->onDelete('cascade'); 
-            
-            $table->foreign('voice_eval_id')
-            ->references('id')->on('voice_evals')
-            ->onDelete('cascade');  
-
-            $table->foreign('face_eval_id')
-            ->references('id')->on('face_evals')
-            ->onDelete('cascade'); 
-
-            $table->foreign('vedio_id')
-            ->references('id')->on('vedios')
-            ->onDelete('cascade'); 
 
 
             $table->rememberToken();

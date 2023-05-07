@@ -18,8 +18,7 @@ class Evaluation extends Model
      */
     
     protected $fillable = [
-        'hand_eval_id', 'voice_eval_id','face_eval_id',
-        'vedio_id'
+
     ];
 
 
